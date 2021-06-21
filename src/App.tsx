@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button } from './components/Button'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button />
+      <Button />
+      <Button />
+      <Button />
     </div>
   );
 }
 
 export default App;
+
+/*
+  Estado é uma informação mantida por um componente de dentro do React.
+  Sempre que tivermos uma informação que será alterada pelo uso do usuário
+  (usuário clicou no botão, a informação terá um novo valor, sempre será
+    armazenado no estado ), ou seja, sempre que uma informação não permanece
+  com o mesmo valor durante todo o uso da aplicação, aquilo é um estado.
+*/
