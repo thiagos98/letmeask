@@ -29,20 +29,25 @@ export function Home() {
       await signInWithGoogle();
     }
 
-    history.push('/rooms/new');          
+    history.push('/rooms/new');
   }
 
   async function handleJoinRoom(event: FormEvent) {
     event.preventDefault();
 
-    if(roomCode.trim() === ''){
+    if (roomCode.trim() === '') {
       return;
     }
 
     const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
-    if(!roomRef.exists()) {
+    if (!roomRef.exists()) {
       alert('Room does not exists.');
+      return;
+    }
+
+    if (roomRef.val().endedAt) {
+      alert('Room already closed.');
       return;
     }
 
