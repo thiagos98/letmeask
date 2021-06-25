@@ -18,10 +18,6 @@
 
 <br>
 
-<p align="center">
-  <img alt="letmeask" src=".github/cover.svg" width="100%">
-</p>
-
 ## ✨ Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
